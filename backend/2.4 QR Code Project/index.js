@@ -11,7 +11,7 @@ inquirer .prompt([
 .then((answers) => {
 const url = answers.URL;
 var code = qr.image(url);
-code.pipe(fs.createWriteStream('qr.png'));
+code.pipe(fs.createWriteStream('qr1.png'));
 fs.writeFile("url.txt",url,(err)=>{
     if(err) throw err;
     console.log("url saved");
